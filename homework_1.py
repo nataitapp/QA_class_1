@@ -5,13 +5,27 @@ __author__ = 'nata'
 
 import random
 
-randoms = range(100)
-random.shuffle(randoms)
-numbers = randoms[:31]
+l = range(100)
+random.shuffle(l)
+numbers = l[:31]
 
 for number in numbers:
     if number % 2 == 0:
         # number.sort()  optional, if we want numbers to display nicely, we can also sort them.
+        print number
+
+
+#             ***OR WE CAN DO IT THIS WAY: CODE WORK THE SAME WAY***
+
+
+import random
+
+l = []
+for i in range(30):
+    i1 = l.append(random.randint(0, 100))
+
+for number in l:
+    if number % 2 == 0:
         print number
  #=====================================================================================================
 """
