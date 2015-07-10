@@ -6,4 +6,3 @@ l_1 =''.join(l)
 for i in l_1:
     k = int(i) * 2
     print k
-del l_1[3]
