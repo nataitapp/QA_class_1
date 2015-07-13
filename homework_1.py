@@ -39,16 +39,16 @@ random.shuffle(randoms)
 numbers = randoms[:31]
 print numbers
 
-count = 0
-smallest = 0
+
+smallest = 100
 largest = 0
 
 for number in numbers:
-    if smallest == 0 or number < smallest:
+    if number < smallest:
         smallest = number
-    elif largest == 0 or number < smallest:
+    if number > largest:
         largest = number
-        difference = largest - smallest
+difference = largest - smallest
 print smallest, largest
 print difference
 #=======================================================================================================
