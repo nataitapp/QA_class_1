@@ -21,9 +21,18 @@ def numbers1(l, val):
             if sum == val:
                 res.append((l[i], l[j]))
     return res
-    # for l = [1, 2, 1, 2], should I return [1, 2] twice or only once ? should I return [2, 1] as well?
+    # OR
 
 print numbers1(pick_numbers, 15)
+pick_numbers = [5,2]
+def numbers2(l, val):
+    res = []
+    for i in range(len(l)):
+        if l.count(val - l[i]) > 0:
+            res.append((l[i], val - l[i]))
+    return res
+
+print numbers2(pick_numbers, 10)
 
 
 
