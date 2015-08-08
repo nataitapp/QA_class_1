@@ -39,7 +39,7 @@ class TestClass(TestCase):
     def test_delete_folder_wrong_accept_header(self):
         folder_name = self.calls.gen_random_name()
         resp = self.calls.delete_folder(folder_name, accept = 'application/xml')
-        assert self.http_code == httplib.NOT_ACCEPTABLE #or 406
+        assert resp.http_code == httplib.NOT_ACCEPTABLE #or 406
         assert resp.json_body['errorMessage'] == 'Not Acceptablet'
 
     def test_method_not_allowed(self):
