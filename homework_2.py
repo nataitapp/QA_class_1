@@ -4,7 +4,7 @@ __author__ = 'nata'
 
 import random
 
-def numbers(n, minr, maxr, ):
+def numbers(n, minr, maxr):
     l = []
     for i in range(n):
         l.append(random.randint(minr, maxr))
@@ -33,6 +33,24 @@ def numbers2(l, val):
     return res
 
 print numbers2(pick_numbers, 10)
+
+"""Find sum of 5 in random number list"""
+
+def numbers(n, x):
+    l = sorted(n)
+    j = 0
+    v = len(l) - 1
+    while j < v :
+        res = l[j] + l[v]
+        if res == x :
+            print l[j],l[v]
+            j = j + 1
+            v = v - 1
+        elif res > x :
+            v = v - 1
+        else :
+            j = j + 1
+
 
 
 
