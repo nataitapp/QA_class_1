@@ -1,6 +1,4 @@
-__author__ = 'nata'
-
-from api_framework.src.api_utils import Calls
+from api_utils import Calls
 from unittest import TestCase
 import httplib
 
