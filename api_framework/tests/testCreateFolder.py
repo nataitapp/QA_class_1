@@ -37,7 +37,7 @@ class TestClass(TestCase):
     def test_delete_non_existing_folder(self):
         folder_name = self.calls.gen_random_name()
         resp = self.calls.delete_folder(folder_name)
-        assert self.http_code == httplib.NOT_FOUND
+        assert resp.http_code == httplib.NOT_FOUND
         assert resp.json_body['errorMessage'] == 'Item does not exist'
 
     #demanding wrong content_type from the server
