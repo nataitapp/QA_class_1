@@ -75,6 +75,10 @@ class TestClass(TestCase):
 
 
     def test_perms(self):
+        folder_name = self.calls.gen_random_name()
+        self.calls.create_folder(folder_name)
+        resp = self.calls.set_perms(folder_name, username=self.config.puser, test_path='%s/%s' % (self.config.test_path, folder_name))
+        assert resp.http_code == httplib.CREATED
 
 
 
