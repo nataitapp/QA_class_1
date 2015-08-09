@@ -145,7 +145,7 @@ class Calls:
         #print('\n' + str(response.http_code))
         return response
 
-    def test_set_perms(self, folder_name, permission, user, domain=None, username=None,
+    def set_perms(self, folder_name, permission, user, domain=None, username=None,
                        password=None, content_type=None, accept=None, method=None, test_path=None):
         if domain is None:
             domain = self.config.domain

@@ -74,6 +74,9 @@ class TestClass(TestCase):
             assert resp.json_body == self.calls.no_json
 
 
+    def test_perms(self):
+
+
 
 
 
