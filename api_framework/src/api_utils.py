@@ -111,7 +111,7 @@ class Calls:
             method = 'DELETE'
         if accept is None :
             accept = 'application/json'
-        if content_type = None:
+        if content_type is None :
             content_type = 'application/json'
         if test_path is None :
             test_path = self.config.test_path
