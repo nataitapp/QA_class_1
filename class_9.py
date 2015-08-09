@@ -29,3 +29,30 @@ for i in n1:
     if i in d and d[elem] > 0:
         d[elem] -=1
         print elem
+
+
+#-------------------------------------------------------------------------
+"""delete copy of the element in the list"""
+
+l = (123,123,124,125,234,5,667)
+d = dict()
+for i in range(len(l)):
+    if l[i] not in d:
+        d[l[i]] = i
+    else:
+        l[i] = ''
+print l
+
+#--SAME--
+
+l = (123,123,124,125,234,5,667)
+d = dict()
+l1 = ['' for x in range(len(l1))]
+for i in range(len(l)):
+    if l[i] not in d:
+        d[l[i]] = i
+for key in d:
+    l1[d[key]] = key
+
+print l1
+

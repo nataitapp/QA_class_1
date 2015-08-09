@@ -50,6 +50,19 @@ __author__ = 'nata'
 #     return temp
 # print jul(temp)
 
+#or
+
+# def fib(n):
+#     x = 0
+#     y = 1
+#     if n < 2:
+#         return n
+#     for i in range(n-1):
+#         t =y
+#         y += x
+#         x = t
+#     return y
+
 """fibanacci function"""
 def f(n):
     if n == 0 : return 0
